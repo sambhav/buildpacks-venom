@@ -39,9 +39,10 @@ vet: ## go vet
 	go vet ./...
 
 .PHONY: fmt
-fmt: ## go fmt
+fmt: ## format source code
 	$(call print-target)
 	go fmt ./...
+	golangci-lint run --fix
 
 .PHONY: lint
 lint: ## golangci-lint
@@ -58,13 +59,17 @@ test: ## go test with race detector and code covarage
 mod-tidy: ## go mod tidy
 	$(call print-target)
 	go mod tidy
-	cd tools && go mod tidy
 
 .PHONY: diff
 diff: ## git diff
 	$(call print-target)
 	git diff --exit-code
 	RES=$$(git status --porcelain) ; if [ -n "$$RES" ]; then echo $$RES && exit 1 ; fi
+
+.PHONY: buildpacks-venom
+buildpacks-venom: # build a local binary
+buildpacks-venom:
+	go build
 
 .PHONY: build
 build: ## goreleaser --snapshot --skip-publish --rm-dist
