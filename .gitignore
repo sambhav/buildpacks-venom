@@ -1,7 +1,6 @@
 # MacOS DS_Store files
 .DS_Store
 
->>>>>>> ea6c78a (Add initial files)
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -14,19 +13,18 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
-<<<<<<< HEAD
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
-=======
 coverage.html
 
 # Dependency directories (remove the comment below to include it)
 #vendor/
 
-# Output of GoReleaser
+# Output binaries
 dist/
 tools/
+buildpacks-venom
 
 # Visual Studio Code files
 .vscode/*
@@ -45,3 +43,6 @@ tools/
 # env files that usually contain secrets or local config
 .env
 .envrc
+
+# venom log files
+venom*.log
