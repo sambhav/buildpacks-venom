@@ -1,3 +1,7 @@
+# MacOS DS_Store files
+.DS_Store
+
+>>>>>>> ea6c78a (Add initial files)
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -10,6 +14,34 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+<<<<<<< HEAD
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+=======
+coverage.html
+
+# Dependency directories (remove the comment below to include it)
+#vendor/
+
+# Output of GoReleaser
+dist/
+tools/
+
+# Visual Studio Code files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# GoLand and IntelliJ IDEA files
+.idea/
+
+# env files that usually contain secrets or local config
+.env
+.envrc
