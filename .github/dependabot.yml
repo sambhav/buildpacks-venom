@@ -13,14 +13,6 @@ updates:
     labels:
       - semver:patch
       - type:dependency-upgrade
-  # Maintain dependencies for build tools
-  - package-ecosystem: "gomod"
-    directory: "/tools"
-    schedule:
-      interval: "daily"
-    labels:
-      - semver:patch
-      - type:dependency-upgrade
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
