@@ -11,7 +11,7 @@ jobs:
         name: Minimal Semver Labels
         runs-on: ubuntu-latest
         steps:
-            - uses: mheap/github-action-required-labels@v2
+            - uses: mheap/github-action-required-labels@v3
               with:
                 count: 1
                 labels: semver:major, semver:minor, semver:patch
@@ -20,7 +20,7 @@ jobs:
         name: Minimal Type Labels
         runs-on: ubuntu-latest
         steps:
-            - uses: mheap/github-action-required-labels@v2
+            - uses: mheap/github-action-required-labels@v3
               with:
                 count: 1
                 labels: type:bug, type:dependency-upgrade, type:documentation, type:enhancement, type:question, type:task
